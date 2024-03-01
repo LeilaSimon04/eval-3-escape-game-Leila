@@ -1,0 +1,286 @@
+/*Liens pour mes typos sur Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*CSS GENERAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Couleurs typos et backgrounds*/
+:root{
+    --backgroundBody : #F2E2A7;
+    --backgroundMarron : #0d0401;
+    --backgroundBlanc: white;
+    --jaune: #F2C012;
+    --typoBouton : #212121;
+
+}
+/*Si je mets un background au Body, les classes background pour les cartes, une section et le footer ne fonctionne pas. Je suis obligée de spécifier le background directement aux cartes, section, Footer. Je préfère donc donner une classe couleur aux sections, cartes, footer, mais là aussi ça ne fonctionnait pas. Donc je ferai un par un.*/
+body{background-color: var(--backgroundBody);}
+.backgroundMarron{background-color:var(--backgroundMarron);}
+.backgroundCard{background-color:var(--backgroundBlanc)}
+/* TYPOS */
+h1{
+    font-family: roboto, sans-serif ;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+}
+h2{
+    font-family: teko;
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+}
+h3{
+    font-family: teko;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+}
+h4{
+    font-family: teko;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+}
+p{
+    font-family: roboto, sans-serif ;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+a{
+    text-decoration: none;
+    font-family: roboto, sans-serif ;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+/*Pour les boutons (a) Réservations*/
+.bouton{
+    background-color: var(--jaune);
+    color:var(--typoBouton);
+    padding: 8px 12px;
+}
+/* Pour que les images soient responsives */
+img{
+    width:100%;
+    height:auto;
+}
+/*les Flex box*/
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justifyBetween{justify-content: space-between;}
+.justifyAround{justify-content: space-around;}
+.alignCenter{align-items: center;}
+/* Container et Tailles */
+.container-1200{
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.width100{width: 100%;}
+.width60{width:60%;}
+.width40{width:40%;}
+.width25{width:25%;}
+.width10{width:10%;}
+/* HERO */
+.hero{
+    height: 100vh;
+    background-image: url(./asset/banniere.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+}
+/*DIV accroche*/
+.accroche{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    flex-direction: column;
+}
+/* Container Salles */
+.containerSalles>div{
+    position: relative;
+    bottom:120px;
+}
+/* Cartes des salles */
+.salle{padding: 8px;}
+.salle>div{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+}
+.salle h4{margin-top:20px;}
+.salle p{
+    margin-top:20px;
+    margin-bottom: 30px;
+}
+/* Container CRITERES */
+.containerCriteres {
+    background-color: var(--backgroundMarron);
+    padding: 80px;
+}
+/* Cartes des CRITERES */
+.critere{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.critere>p{
+    color:var(--jaune);
+    margin-top:20px;
+}
+/* Section Présentation */
+.containerPresentation{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 150px;
+}
+.containerPresentation>article{
+    margin-left:auto;
+    margin-right: auto;
+    padding: 30px;
+}
+/* Article Mettez vous dans la peau d'un détective*/
+.detective>div{
+    justify-content: center;
+    flex-direction: column;
+}
+.imgDetective{
+    box-shadow: 16px -16px #000000;
+}
+/* Article Résolvez nos énigmes*/
+.resolvezEnigme>div{
+    justify-content: center;
+    flex-direction: column;
+}
+.imgEnigme{
+    box-shadow: -16px -16px #000000;
+}
+/* Section Avis */
+.containerAvis{gap:20px;}
+.avis{padding: 10px;}
+.imgAvis{width:20%;}
+.identiteAvis{width:78%;}
+.avis p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.etoile{color: var(--jaune);}
+/* FOOTER */
+footer{
+    gap:200px;
+    padding:60px;
+}
+footer>div>h3{color: white;
+    margin-bottom: 10px;
+}
+footer>div>p{color: white;
+    line-height: 35px;
+}
+.bold{font-weight: bold;}
+.contacts{padding:5px;}
+.imgContacts{width: 10%;}
+.contacts>address{padding-left:5px;}
+/* Pour plus tard dans le responsive */
+.sautLigne{display: none;}
+/* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
+/* Responsive pour TABLETTE TABLETTE TABLETTE */
+@media (min-width: 541px) and (max-width: 1080px){
+/* Container des salles par thématiques */
+.containerSalles{padding: 20px;}
+/* Container Présentation */
+.containerPresentation{gap: 100px;}
+.containerPresentation>article{padding: 30px;}
+.detective>div {width: 50%;}
+.resolvezEnigme>div{width: 50%;}
+.containerAvis{padding: 0 30px;}
+/* Footer */
+footer {
+    gap:50px;
+    padding:20px;
+}
+}
+/* Responsive pour TELEPHONE TELEPHONE TELEPHONE */
+@media screen and (max-width:540px){
+    h1{
+        font-size: 15px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    h2{font-size: 25px;};
+    h3{font-size: 20px;}
+    a{font-size: 12px;}
+    /*Pour les boutons (a) Réservations*/
+    .bouton{
+        background-color: var(--jaune);
+        color:var(--typoBouton);
+        padding: 8px 12px;
+    }
+/* Hero */
+/*DIV accroche*/
+.accroche{width:90%;}
+.accroche>div{width: 30%;}
+/* Container Salles */
+.containerSalles>div{
+    position: relative;
+    bottom:120px;
+}
+/* Cartes des salles */
+.salle{padding: 8px;}
+.salle>div{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+}
+.salle h4{margin-top:20px;}
+.salle p{
+    margin-top:20px;
+    margin-bottom: 30px;
+}
+#artSalles {gap:15px;}
+#artSalles>article{width: 100%;}
+/* Container CRITERES */
+.containerCriteres {
+    padding: 20px;
+}
+/* Cartes des CRITERES */
+.containerCriteres{gap:30px;}
+.critere{width: 60%;}
+/* Section Présentation */
+.containerPresentation{gap: 40px;}
+.containerPresentation>article{padding: 20px;}
+/* Article Mettez vous dans la peau d'un détective*/
+.detective{flex-direction: column-reverse;}
+.detective>div{width: 100%;}
+.imgDetective{width:100%;}
+/* Article Résolvez nos énigmes*/
+.resolvezEnigme>div{width: 100%;}
+.imgEnigme{width:100%;}
+/* Section Avis */
+.containerAvis{padding: 20px;}
+#divAvis{gap:30px;}
+.avis{width: 100%;}
+.imgAvis{width:30%;}
+.identiteAvis{
+    width:70%;
+    padding-left: 8px;
+}
+/* FOOTER */
+footer{
+    gap:50px;
+    padding:20px;
+}
+.sautLigne{display: contents;}
+}
